@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --warmwhite: #FAF9F6;
+  --deepblue: #0B1E3D;
+  --electric: #2563EB;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--warmwhite);
+  color: #111827;
+  font-feature-settings: "cv11", "ss01";
+}
+
+::selection { background: rgba(37,99,235,0.15); }
+
+.glass {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+.card-hover {
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(11,30,61,0.10);
+}
+
+.scrollbar-fina::-webkit-scrollbar { height: 6px; width: 6px; }
+.scrollbar-fina::-webkit-scrollbar-thumb { background: #D8D5CE; border-radius: 10px; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeInUp 500ms ease forwards; }
